@@ -1,4 +1,37 @@
+
 body {
+  background-color: #FFE4C4;
+  margin: 0;
+  width: 100%;
+  padding: 0;
+  height: 100%;
+}
+h1 {
+  text-align: center;
+}
+#pagetitle {
+  flex: 100%;
+  max-width: 960px;
+  background-color: #8FBC8F;
+}
+body img {
+  max-width: 100%;
+}
+.navcontainer {
+  background-color: #8FBC8F;
+  flex: 100%;
+  max-width: 100%;
+}
+.navbar {
+  display: block;
+  background-color: #8FBC8F;
+  height: 10%;
+  max-width: 100%;
   margin: auto;
-  width: 60%;
+  text-align: center;
+  text-decoration: none;
+  opacity:0.5;
+}
+.navbar:hover {
+  opacity:1;
 }
