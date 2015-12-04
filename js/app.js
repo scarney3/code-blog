@@ -14,6 +14,6 @@ Article.prototype.toHTML = function() {
   $article.find('.author').html(this.author);
   $article.find('.authorUrl').html(this.authorUrl);
   $article.find('.publishedOn').html(this.publishedOn);
-  $article.find('.body').html(this.body);
+  $article.find('.artbod').html(this.body);
   $('main').prepend($article);
 };
