@@ -38,11 +38,6 @@ blog.truncateArticle = function() {
 //   });
 // };
 
-$(document).ready(function() {
-  blog.newArticle();
-  blog.truncateArticle();
-  // blog.filterCategory();
-});
 
 // function to sort publish date here
 // blog.sort(function (a, b) {
