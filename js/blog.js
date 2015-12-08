@@ -2,10 +2,18 @@ var blog = {};
 
 blog.newArticle = function() {
   for (var i = 0; i < blog.rawData.length; i++) {
-    var template = new Article (blog.rawData[i]);
-    template.toHTML();
+    var blogEntry = new Article(blog.rawData[i]);
+    this.appendArticle(blogEntry);
   }
 };
+
+blog.appendArticle = function(article) {
+  $('main').append(article.toHTML());
+};
+//
+// var source   = $('#entry-template').html();
+// var handlebartemp = Handlebars.compile(source);
+// var context = {title: '.title', category: '.category', author: '.author', authorUrl: '.authorUrl', publishedOn: '.publishedOn', body: '.artbod'};
 
 blog.truncateArticle = function() {
   $('article p:not(:first-child)').hide().fadeIn(500).fadeOut(800);

@@ -8,12 +8,8 @@ var Article = function (object) {
 };
 
 Article.prototype.toHTML = function() {
-  var $article = $('#article').clone();
-  $article.find('.title').html(this.title);
-  $article.find('.category').html(this.category);
-  $article.find('.author').html(this.author);
-  $article.find('.authorUrl').html(this.authorUrl);
-  $article.find('.publishedOn').html(this.publishedOn);
-  $article.find('.artbod').html(this.body);
-  $('main').prepend($article);
+  var source = $('#entry-template').text();
+  var template = Handlebars.compile(source);
+
+  return template(this);
 };
